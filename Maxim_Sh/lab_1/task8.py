@@ -11,8 +11,7 @@ def crossImg(path):
     center_y = h // 2
 
     b,g,r = img[center_y, center_x]
-    print(img[center_y, center_x])
-    print(b,g,r)
+
     if max(b,g,r) == b: color = (255,0,0)
     elif max(b,g,r) == g: color = (0, 255,0)
     elif max(b,g,r) == r: color = (0,0,255)
