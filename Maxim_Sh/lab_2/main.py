@@ -31,10 +31,10 @@ def red_detect(url):
             area = cv.contourArea(cnt)
             if area <= 500: continue
             moment = cv.moments(cnt)
-            if moment['m00'] != 0:  # Проверка, что площадь не нулевая
-                cx = int(moment['m10'] / moment['m00'])  # Центр X
-                cy = int(moment['m01'] / moment['m00'])  # Центр Y
-                cv.circle(frame, (cx, cy), 2, (0, 0, 0), -1)  # Рисуем точку
+            if moment['m00'] != 0:
+                cx = int(moment['m10'] / moment['m00'])
+                cy = int(moment['m01'] / moment['m00'])
+                cv.circle(frame, (cx, cy), 2, (0, 0, 0), -1)
                 x, y, w, h = cv.boundingRect(cnt)
                 cv.rectangle(frame, (x,y), (x+w,y+h),(0,0,0), 1)
 
