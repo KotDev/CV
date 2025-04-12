@@ -52,7 +52,7 @@ def gauss_blur_bgr(image, kernel_size, sigma=1):
 if __name__ == "__main__":
     img = cv.imread("./genius.png")
     blur_bgr = gauss_blur_bgr(img, 5, 1.5)
-    blur_bgr_2 = gauss_blur_bgr(img, 7, 2)
+    blur_bgr_2 = cv.GaussianBlur(img, (5,5), 1.5,sigmaY=1.5)
 
     cv.namedWindow("original", cv.WINDOW_NORMAL)
     cv.namedWindow("blur_bgr", cv.WINDOW_NORMAL)
