@@ -21,4 +21,4 @@ def translateCamera(url, n):
     cv.destroyAllWindows()
 
 if __name__ == "__main__":
-    translateCamera("http://192.168.46.20:8080/video", 20)
+    translateCamera("http://192.168.46.20:8080/video", 80)
